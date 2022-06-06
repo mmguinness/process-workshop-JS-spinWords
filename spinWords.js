@@ -1,5 +1,5 @@
 function spinWords(string) {
-  let words = string.split(" ");
+  const words = string.split(" ");
 
   let output = words.map(function spinOrNot(word) {
     if (word.length >= 5) {

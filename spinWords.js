@@ -1,14 +1,15 @@
 function spinWords(string) {
-  let words = null;
-  
-  if(string.length >= 5) {
-    words = string.split("").reverse().join("");
-  } else if (string.length <= 4) {
-    words = string;
-  }
+  let words = string.split(" ");
 
-  return words;
+  let output = words.map(function spinOrNot(word) {
+    if (word.length >= 5) {
+      return word.split("").reverse().join("");
+    } else if (word.length <= 4) {
+      return word;
+    }
+  });
 
+  return output.join(" ");
 }
 
 module.exports = spinWords;
